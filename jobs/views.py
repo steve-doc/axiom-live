@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Job
 
 
 posts = [
@@ -20,15 +20,19 @@ posts = [
 
 
 def home(request):
-    return render(request, 'jobs/home.html')
+    return render(request, 'jobs/home.html', {'title': 'Home'})
 
 
 def postings(request):
     context = {
-        'posts': posts
-        }
+		'jobs': Job.objects.all()
+    }
     return render(request, 'jobs/postings.html', context)
 
 
 def about(request):
-    return render(request, 'jobs/about.html')
+    return render(request, 'jobs/about.html', {'title': 'About'})
+
+
+def contact(request):
+    return render(request, 'jobs/contact.html', {'title': 'Contact'})
