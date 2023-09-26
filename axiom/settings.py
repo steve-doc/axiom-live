@@ -28,21 +28,24 @@ SECRET_KEY = 'django-insecure-22ohfw&ok$dq8w4%^!p24(6*%#61!v_9qwp^2an4ion#ty2_a8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-stevedoc-axiom-zkonjehgcr7.ws-eu104.gitpod.io']
+ALLOWED_HOSTS = ['8000-stevedoc-axiom-zkonjehgcr7.ws-eu105.gitpod.io']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-stevedoc-axiom-zkonjehgcr7.ws-eu104.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-stevedoc-axiom-zkonjehgcr7.ws-eu105.gitpod.io']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'jobs.apps.JobsConfig',
+    'users.apps.UsersConfig',
+    "crispy_forms",
+    "crispy_bootstrap5",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'jobs.apps.JobsConfig',
 ]
 
 MIDDLEWARE = [
@@ -123,7 +126,16 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+LOGIN_REDIRECT_URL = 'jobs-home'
+LOGIN_URL = 'login'
