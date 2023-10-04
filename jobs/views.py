@@ -39,6 +39,14 @@ class JobListView(ListView):
 
 class JobDetailView(DetailView):
     model = Job
+    fields = [
+        'job_title',
+        'location',
+        'type',
+        'description',
+        'skills',
+        'salary'
+        ]
 
 
 class JobCreateView(LoginRequiredMixin, CreateView):
@@ -72,6 +80,17 @@ class JobUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         form.instance.creator = self.request.user
         return super().form_valid(form)
 
+    def test_func(self):
+        job = self.get_object()
+        if self.request.user == job.creator:
+            return True
+        return False
+
+
+class JobDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = Job
+    success_url = "postings/"
+  
     def test_func(self):
         job = self.get_object()
         if self.request.user == job.creator:

@@ -1,19 +1,35 @@
 {% extends "jobs/base.html" %} {% block content %}
 
-
-
 <div class="media content-section">
-  
   <div class="media-body">
     <div class="article-metadata row">
       <small class="text-muted col">Location: {{ object.location }}</small>
-      <small class="text-muted col text-end">Posted: {{ object.date_posted|date:"F d, Y" }}</small>
+      <small class="text-muted col text-end"
+        >Posted: {{ object.date_posted|date:"F d, Y" }}</small
+      >
     </div>
-    <h2 class="article-title">{{ object.job_title }}</h2>
-    <p class="article-content">{{ object.description }}</p>
+    <h2 class="article-title">Role: {{ object.job_title }}</h2>
+    <p class="article-content">Job Description: <br>{{ object.description }}</p>
+    <p class="article-content">Experience: <br>{{ object.skills }}</p>
   </div>
+  <div class="article-metadata row">
+    <small class="text-muted col">Salary: {{ object.salary }}</small>
+  
+  </div>
+  {% if object.creator == user %}
+  <div>
+    <a
+      class="btn btn-secondary btn-sm mt-1 mb-1"
+      href="{% url 'job-update' object.id %}"
+      >Update</a
+    >
+    <a
+      class="btn btn-danger btn-sm mt-1 mb-1"
+      href="{% url 'job-delete' object.id %}"
+      >Delete</a
+    >
+  </div>
+  {% endif %}
 </div>
 
-
- 
 {% endblock content %}
