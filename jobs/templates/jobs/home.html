@@ -1,16 +1,79 @@
 {% extends "jobs/base.html" %} {% block content %}
-<div class="home-hero container-fluid bglight p-5 text-white">
 
-    <h1 class="text-white">Home Page!</h1>
-    <hr class="my-4" />
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consectetur
-      nam voluptatem. Nostrum nisi in nemo incidunt tempore iure facilis
-      delectus consequatur? Omnis libero voluptate minus veritatis doloremque
-      earum ducimus.
-    </p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+<section class="home-hero container-fluid bglight p-5">
+  <div class="home-hero-title-cont row justify-content-center">
+    <div class="home-hero-title col-6">
+      <h2>Helping you find the best talent</h2>
+      <a class="btn btn-primary mt-2" href="#" role="button">Learn more</a>
+    </div>
   </div>
+</section>
 
+<section class="services container-fluid">
+  <h2 class="text-center pb-3">Our Services</h2>
+  <div class="row">
+    <div class="col col-md-4">
+      <div class="card px-0">
+        <img
+          src="/media/new_job.webp"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Recruitment</h5>
+          <p class="card-text">
+            Are you looking for a new job? We specialise in the financial service sector. To find our more please visit our jobs page.
+          </p>
+        </div>
+
+        <div class="card-body mx-auto">
+          <a href="#" class="card-link btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col col-md-4">
+      <div class="card px-0">
+        <img
+          src="/media/grow_your_business.webp"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Growing your business</h5>
+          <p class="card-text">
+            Looking to hire the best talent? We can help you fill your current vacancies by finding the right candidates for you.
+          </p>
+        </div>
+
+        <div class="card-body mx-auto">
+          <a href="#" class="card-link btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col col-md-4">
+      <div class="card px-0">
+        <img
+          src="/media/merger.webp"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Acquisitions And Mergers</h5>
+          <p class="card-text">
+            Planning on selling your business? Or maybe you are looking to expand? We can help by putting you in touch with the right people. 
+          </p>
+        </div>
+
+        <div class="card-body mx-auto">
+          <a href="#" class="card-link btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
 
 {% endblock content %}

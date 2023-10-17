@@ -14,12 +14,12 @@
       <small class="text-muted col">Location: {{ job.location }}</small>
       <small class="text-muted col text-end">Posted: {{ job.date_posted|date:"F d, Y" }}</small>
     </div>
-    <h2><a class="article-title" href="{% url 'job-detail' job.id %}">{{ job.job_title }}</a></h2>
+    <h2><a class="job-title" href="{% url 'job-detail' job.id %}">{{ job.job_title }}</a></h2>
     <!-- <p class="article-content">{{ job.description }}</p> -->
   </div>
   <div class="text-muted article-metadata row py-1">
     <small class="col">Salary: {{ job.salary }}</small>
-    <small class="col text-end">Job Type: <strong class="salary">{{ job.job_type }}</strong></small>
+    <small class="col text-end">Job Type: <strong class="jobtype">{{ job.job_type }}</strong></small>
 </div>
 </div>
 

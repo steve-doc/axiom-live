@@ -14,10 +14,11 @@
   </div>
   <div class="text-muted article-metadata row py-1">
     <small class="col">Salary: {{ object.salary }}</small>
-    <small class="col text-end">Job Type: <strong class="salary">{{ object.job_type }}</strong></small>
+    <small class="col text-end">Job Type: <strong class="jobtype">{{ object.job_type }}</strong></small>
 </div>
   </div>
-  {% if object.creator == user %}
+ 
+  {% if user.is_staff %}
   <div>
     <a
       class="btn btn-secondary btn-sm mt-1 mb-1"

@@ -1,9 +1,13 @@
 body {
-    background: white;
+    background: #dddddde4;
     color: #333333;
     max-width: 1300px;
     margin: 0 auto;
     /* margin-top: 5rem; */
+  }
+
+  img {
+    max-width: 100%;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -14,8 +18,8 @@ body {
     margin: 0;
   }
   
-  .bg-steel {
-    background-color: #5f788a;
+  .site-header {
+    background-color: #dddddde4;
   }
   
   .site-header .navbar-nav .nav-link {
@@ -37,29 +41,71 @@ body {
   .content-section {
     background: #ffffff;
     padding: 10px 20px;
-    border: 1px solid #dddddd;
-    border-radius: 3px;
+    border: 1px solid black;
+    border-radius: 15px;
     margin-bottom: 20px;
   }
 
   .home-hero {
     min-height: 75vh;
+    background:url(/media/meeting.webp) center center no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .home-hero-title-cont {
+    position: absolute;
+    top: 38%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .home-hero-title {
+    background-color: #44444464;
+    padding: 30px 0px;
+    border-radius: 20px;
+  }
+
+  .home-hero-title h2 {
+    color: #fafafa;
+  }
+
+  /* .serv-card {
+    margin: 0 20px !important;
+    padding: 0 !important;
+  } */
+  
+  .services {
+    padding: 30px 0px;
+  }
+
+  .services .card {
+    background-color: #dddddde4 !important;
+    margin: 0 10px;
+  }
+
+  .serv-card {
+    
+  }
+
+  .postings-hero {
+    min-height: 75vh;
     background:url(/media/meeting.jpg) center center no-repeat;
     background-size: cover;
   }
   
-  .article-title {
-    color: blue;
-  }
-  
-  a.article-title:hover {
-    color: #428bca;
+  .job-title {
+    color: Black;    
     text-decoration: none;
   }
   
+  a.job-title:hover {
+    color: #428bca;
+  }
+  
   .article-content {
-    white-space: pre-line;
-    border: 1px solid darkgray;
+    /* white-space: pre-line; */
+    border: 2px solid darkslategray;
   }
   
   .article-img {
@@ -96,8 +142,9 @@ body {
     font-size: 2.5rem;
   }
 
-  .salary {
-    background-color: green;
+  .jobtype {
+    background-color: rgba(0, 128, 0, 0.711);
+    border-radius: 10px;
     color: white;
-    padding: 3px;
+    padding: 5px;
   }
