@@ -4,11 +4,17 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 
 
+JOB_TYPES = [
+        ("Full-Time", "Full-Time"),
+        ("Part-Time", "Part-Time"),
+        ("Temp", "Temp"),
+    ]
+
 class Job(models.Model):
     job_title = models.CharField(max_length=100)
     date_posted = models.DateTimeField(default=timezone.now)
     location = models.CharField(max_length=30)
-    type = models.CharField(max_length=30)
+    job_type = models.CharField(max_length=15, choices=JOB_TYPES)
     description = models.TextField()
     skills = models.TextField()
     salary = models.CharField(max_length=30)

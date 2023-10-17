@@ -12,9 +12,10 @@
     <p class="article-content">Job Description: <br>{{ object.description }}</p>
     <p class="article-content">Experience: <br>{{ object.skills }}</p>
   </div>
-  <div class="article-metadata row">
-    <small class="text-muted col">Salary: {{ object.salary }}</small>
-  
+  <div class="text-muted article-metadata row py-1">
+    <small class="col">Salary: {{ object.salary }}</small>
+    <small class="col text-end">Job Type: <strong class="salary">{{ object.job_type }}</strong></small>
+</div>
   </div>
   {% if object.creator == user %}
   <div>

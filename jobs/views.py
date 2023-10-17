@@ -35,6 +35,7 @@ class JobListView(ListView):
     template_name = 'jobs/postings.html'
     context_object_name = 'jobs'
     ordering = ['-date_posted']
+    paginate_by = 3
 
 
 class JobDetailView(DetailView):
@@ -42,7 +43,7 @@ class JobDetailView(DetailView):
     fields = [
         'job_title',
         'location',
-        'type',
+        'job_type',
         'description',
         'skills',
         'salary'
@@ -54,7 +55,7 @@ class JobCreateView(LoginRequiredMixin, CreateView):
     fields = [
         'job_title',
         'location',
-        'type',
+        'job_type',
         'description',
         'skills',
         'salary'
@@ -70,7 +71,7 @@ class JobUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     fields = [
         'job_title',
         'location',
-        'type',
+        'job_type',
         'description',
         'skills',
         'salary'
@@ -89,7 +90,7 @@ class JobUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class JobDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Job
-    success_url = "postings/"
+    success_url = "/postings/"
   
     def test_func(self):
         job = self.get_object()
