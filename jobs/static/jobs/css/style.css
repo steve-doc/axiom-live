@@ -19,7 +19,8 @@ body {
   }
   
   .site-header {
-    background-color: #dddddde4;
+    /* background-color: #dddddde4; */
+    background-color: red;
   }
   
   .site-header .navbar-nav .nav-link {
