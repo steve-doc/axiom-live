@@ -156,3 +156,17 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 LOGIN_REDIRECT_URL = 'jobs-home'
 LOGIN_URL = 'login'
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+        },
+    },
+    "root": {
+        "handlers": ["console"],
+        "level": "WARNING",
+    },
+}

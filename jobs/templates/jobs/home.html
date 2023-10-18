@@ -1,4 +1,4 @@
-{% extends "jobs/base.html" %} {% block content %}
+{% extends "jobs/base.html" %} {% load static %} {% block content %}
 
 <section class="home-hero container-fluid bglight p-5">
   <div class="home-hero-title-cont row justify-content-center">
@@ -15,7 +15,7 @@
     <div class="col col-md-4">
       <div class="card px-0">
         <img
-          src="/media/new_job.webp"
+          src="{% static 'media/new_job.webp' %}"
           class="card-img-top"
           alt="..."
         />
@@ -35,7 +35,7 @@
     <div class="col col-md-4">
       <div class="card px-0">
         <img
-          src="/media/grow_your_business.webp"
+          src="{% static 'media/grow_your_business.webp' %}"
           class="card-img-top"
           alt="..."
         />
@@ -55,7 +55,7 @@
     <div class="col col-md-4">
       <div class="card px-0">
         <img
-          src="/media/merger.webp"
+          src="{% static 'media/grow_your_business.webp' %}/media/merger.webp"
           class="card-img-top"
           alt="..."
         />
