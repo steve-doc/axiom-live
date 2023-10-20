@@ -116,13 +116,6 @@ def send_email(request):
             email = request.POST.get("email")
             tel = request.POST.get("tel")
             message = request.POST.get("message")
-            EmailMessage(
-                email_from,
-                name,
-                email,
-                tel,
-                message,
-                connection=connection
-                ).send()
+            EmailMessage(email_from, name, email, tel, message, connection=connection).send()
 
     return render(request, 'jobs/contact.html', {'title': 'Contact'})
