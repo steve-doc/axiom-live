@@ -30,11 +30,17 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['8000-stevedoc-axiom-zkonjehgcr7.ws-eu105.gitpod.io', 'axiom-recruitment-f7943c5e25ff.herokuapp.com']
+ALLOWED_HOSTS = [
+    '8000-stevedoc-axiom-zkonjehgcr7.ws-eu105.gitpod.io',
+    'axiom-recruitment-f7943c5e25ff.herokuapp.com'
+    ]
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-stevedoc-axiom-zkonjehgcr7.ws-eu105.gitpod.io']
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-stevedoc-axiom-zkonjehgcr7.ws-eu105.gitpod.io',
+    'https://axiom-recruitment-f7943c5e25ff.herokuapp.com'
+    ]
 
 
 # Application definition

@@ -122,6 +122,7 @@ def send_email(request):
                 email,
                 tel,
                 message,
-                connection=connection).send()
+                connection=connection
+                ).send()
 
     return render(request, 'jobs/contact.html', {'title': 'Contact'})
