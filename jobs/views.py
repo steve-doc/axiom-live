@@ -111,16 +111,24 @@ def send_email(request):
             password=settings.EMAIL_HOST_PASSWORD,
             use_tls=settings.EMAIL_USE_TLS
         ) as connection:    
-            email_from = settings.EMAIL_HOST_USER
+            email_from = request.POST.get("email") 
             name = request.POST.get("name")
-            recipient_list = [request.POST.get("email"), ]
+            recipient_list = [settings.EMAIL_HOST_USER, ]
             tel = request.POST.get("tel")
             message = request.POST.get("message")
+            formatted_body = f'''
+            You have received a message from {name}
+            Email: {email_from}
+            Tel: {tel}
+            Message:
+            {message}
+            '''
+            
             # EmailMessage(email_from, name, recipient_list, tel, message, connection=connection).send()
             
             email_message = EmailMessage(
-                subject='Your Subject Here',
-                body=request.POST.get("message"),
+                subject='Enquiry from Axiom Website',
+                body=formatted_body,
                 from_email=email_from,
                 to=recipient_list,
                 connection=connection
