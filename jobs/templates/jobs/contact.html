@@ -1,17 +1,14 @@
 {% extends "jobs/base.html" %}
 {% load static %}
-<script type="text/javascript">
-   (function() {
-         emailjs.init('n36sqN4yqaW_9I6NR');
-   })();
-</script>
 
 {% block content %}
 
    <section class="container-fluid py-4" id="contact">
       <h1 class="text-center">Contact us</h1>
       <h2 class="text-center">For a confidential chat</h2>
-      <form onsubmit="return sendMail(this);" id="contact-form" class="mx-5 px-5 py-2 border" autocomplete="on">
+      <form method="post" class="mx-5 px-5 py-2 border">
+        {% csrf_token %} 
+
         <p class="text-center">
          Have questions? Fill out the enquiry form and we will get back to you as soon as possible
         </p>
@@ -41,10 +38,10 @@
         />
         <textarea
           class="form-control my-3"
-          name="interest"
-          id="interest"
+          name="message"
+          id="message"
           rows="5"
-          placeholder="Enquiry details"
+          placeholder="Message"
         ></textarea>
         <button
           class="btn btn-success btn-md-lg d-grid gap-2 col-4 mx-auto"
@@ -72,5 +69,4 @@
          </div>
        </div>
 
-       <script src="{% static 'jobs/scripts/sendEmail.js' %}"></script>
 {% endblock content %}

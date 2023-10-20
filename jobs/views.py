@@ -8,6 +8,9 @@ from django.views.generic import (
     DeleteView
 )
 from .models import Job
+from django.core.mail import EmailMessage, get_connection
+from django.conf import settings
+
 
 
 
@@ -97,3 +100,28 @@ class JobDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         if self.request.user == job.creator:
             return True
         return False
+
+
+def send_email(request):
+    if request.method == "POST":
+        with get_connection(
+            host=settings.EMAIL_HOST,
+            port=settings.EMAIL_PORT,
+            username=settings.EMAIL_HOST_USER,
+            password=settings.EMAIL_HOST_PASSWORD,
+            use_tls=settings.EMAIL_USE_TLS
+        ) as connection:    
+            email_from = settings.EMAIL_HOST_USER
+            name = request.POST.get("name")
+            email = request.POST.get("email")
+            tel = request.POST.get("tel")
+            message = request.POST.get("message")
+            EmailMessage(
+                email_from,
+                name,
+                email,
+                tel,
+                message,
+                connection=connection).send()
+
+    return render(request, 'jobs/contact.html', {'title': 'Contact'})

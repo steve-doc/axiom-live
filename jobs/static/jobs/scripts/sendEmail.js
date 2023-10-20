@@ -1,3 +1,5 @@
+import os
+
 function sendMail(contactForm) {
     console.log("Hello")
     emailjs.send("service_0a3s8xf","template_szeqs67", {
