@@ -20,7 +20,7 @@ def register(request):
     else:
         form = UserRegisterForm()  # asssigns blank UserCreation form to form object
     return render(request, 'users/register.html', {'form': form})
- 
+
 
 @login_required
 def profile(request):
