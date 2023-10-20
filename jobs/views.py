@@ -113,9 +113,19 @@ def send_email(request):
         ) as connection:    
             email_from = settings.EMAIL_HOST_USER
             name = request.POST.get("name")
-            recipient_list = [request.POST.get("email"), ] 
+            recipient_list = [request.POST.get("email"), ]
             tel = request.POST.get("tel")
             message = request.POST.get("message")
-            EmailMessage(email_from, name, recipient_list, tel, message, connection=connection).send()
+            # EmailMessage(email_from, name, recipient_list, tel, message, connection=connection).send()
+            
+            email_message = EmailMessage(
+                subject='Your Subject Here',
+                body=request.POST.get("message"),
+                from_email=email_from,
+                to=recipient_list,
+                connection=connection
+            )
+
+            email_message.send()
 
     return render(request, 'jobs/contact.html', {'title': 'Contact'})
