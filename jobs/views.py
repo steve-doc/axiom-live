@@ -119,3 +119,4 @@ def send_email(request):
             EmailMessage(email_from, name, email, tel, message, connection=connection).send()
 
     return render(request, 'jobs/contact.html', {'title': 'Contact'})
+
