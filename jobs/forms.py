@@ -10,6 +10,7 @@ class JobUpdateForm(forms.ModelForm):
             'job_title',
             'date_posted',
             'location',
+            'job_type',
             'description',
             'skills',
             'salary']

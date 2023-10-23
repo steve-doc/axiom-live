@@ -56,14 +56,15 @@ class JobDetailView(DetailView):
 
 class JobCreateView(LoginRequiredMixin, CreateView):
     model = Job
-    fields = [
-        'job_title',
-        'location',
-        'job_type',
-        'description',
-        'skills',
-        'salary'
-        ]
+    form_class = JobUpdateForm
+    # fields = [
+    #     'job_title',
+    #     'location',
+    #     'job_type',
+    #     'description',
+    #     'skills',
+    #     'salary'
+    #     ]
     
     def form_valid(self, form):
         form.instance.creator = self.request.user
