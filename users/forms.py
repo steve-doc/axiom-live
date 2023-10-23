@@ -10,7 +10,7 @@ class UserRegisterForm(UserCreationForm):
     class Meta: #subclass that tells django it is the User model we are modifying
         model = User
         # define the field names and the order they should be displayed
-        fields = ['username', 'email', 'password1', 'password2']
+        fields = ['first_name', 'last_name', 'username', 'email', 'password1', 'password2']
 
 
 class UserUpdateForm(forms.ModelForm):
@@ -19,7 +19,7 @@ class UserUpdateForm(forms.ModelForm):
     class Meta: #subclass that tells django it is the User model we are modifying
         model = User
         # define the field names and the order they should be displayed
-        fields = ['username', 'email']
+        fields = ['first_name', 'last_name', 'username', 'email']
 
 
 class ProfileUpdateForm(forms.ModelForm):

@@ -8,6 +8,7 @@ from django.views.generic import (
     DeleteView
 )
 from .models import Job
+from .forms import JobUpdateForm
 from django.core.mail import EmailMessage, get_connection
 from django.conf import settings
 
@@ -25,8 +26,8 @@ def postings(request):
     return render(request, 'jobs/postings.html', context)
 
 
-def about(request):
-    return render(request, 'jobs/about.html', {'title': 'About'})
+def services(request):
+    return render(request, 'jobs/services.html', {'title': 'Services'})
 
 
 def contact(request):
@@ -71,14 +72,16 @@ class JobCreateView(LoginRequiredMixin, CreateView):
 
 class JobUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Job
-    fields = [
-        'job_title',
-        'location',
-        'job_type',
-        'description',
-        'skills',
-        'salary'
-        ]
+    form_class = JobUpdateForm
+    # fields = [
+    #     'job_title',
+    #     'location',
+    #     'job_type',
+    #     'description',
+    #     'skills',
+    #     'salary'
+    #     ]
+
     
     def form_valid(self, form):
         form.instance.creator = self.request.user
@@ -135,5 +138,7 @@ def send_email(request):
             )
 
             email_message.send()
+            messages.success(
+                request, f'Thanks for your enquiry, we will get back to you shortly')
 
     return render(request, 'jobs/contact.html', {'title': 'Contact'})

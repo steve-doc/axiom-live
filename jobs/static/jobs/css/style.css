@@ -110,8 +110,8 @@ body {
   }
   
   .article-content {
-    /* white-space: pre-line; */
-    border: 2px solid darkslategray;
+    min-height: 20vh;
+    border: 1px solid #c4c2c2;
   }
   
   .article-img {
@@ -121,7 +121,7 @@ body {
   }
   
   .article-metadata {
-    padding-bottom: 1px;
+    padding-bottom: 3px !important;
     margin-bottom: 4px;
     border-bottom: 1px solid #e3e3e3
   }
@@ -152,5 +152,6 @@ body {
     background-color: rgba(0, 128, 0, 0.711);
     border-radius: 10px;
     color: white;
-    padding: 5px;
+    padding: 3px 5px;
+    margin-bottom: 5px;
   }

@@ -1,4 +1,6 @@
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 from . import views
 from .views import (
     JobListView,
@@ -16,6 +18,10 @@ urlpatterns = [
     path('job/<int:pk>/update/', JobUpdateView.as_view(), name='job-update'),
     path('job/<int:pk>/delete/', JobDeleteView.as_view(), name='job-delete'),
     path('job/new/', JobCreateView.as_view(), name='job-create'),
-    path('about/', views.about, name='jobs-about'),
+    path('services/', views.services, name='jobs-services'),
     path('contact/', views.send_email, name='jobs-contact'),
 ]
+
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

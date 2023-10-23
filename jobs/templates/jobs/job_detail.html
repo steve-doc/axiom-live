@@ -1,6 +1,6 @@
 {% extends "jobs/base.html" %} {% block content %}
 
-<div class="media content-section">
+<div class="container media content-section">
   <div class="media-body">
     <div class="article-metadata row">
       <small class="text-muted col">Location: {{ object.location }}</small>
@@ -8,9 +8,11 @@
         >Posted: {{ object.date_posted|date:"F d, Y" }}</small
       >
     </div>
-    <h2 class="article-title">Role: {{ object.job_title }}</h2>
-    <p class="article-content">Job Description: <br>{{ object.description }}</p>
-    <p class="article-content">Experience: <br>{{ object.skills }}</p>
+    <h2 class="article-title my-3">{{ object.job_title }}</h2>
+    <h4>Job Description</h4>
+    <p class="">{{ object.description | safe }}</p>
+    <h4>Experience</h4>
+    <p class="">{{ object.skills | safe }}</p>
   </div>
   <div class="text-muted article-metadata row py-1">
     <small class="col">Salary: {{ object.salary }}</small>
@@ -19,7 +21,7 @@
   </div>
  
   {% if user.is_staff %}
-  <div>
+  <div class="container">
     <a
       class="btn btn-secondary btn-sm mt-1 mb-1"
       href="{% url 'job-update' object.id %}"
