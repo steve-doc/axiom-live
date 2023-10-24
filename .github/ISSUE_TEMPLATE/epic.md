@@ -1,9 +1,9 @@
 ---
 name: Epic
 about: 'Epic: '
-title: ''
+title: 'Epic: '
 labels: ''
-assignees: ''
+assignees: steve-doc
 
 ---
 
