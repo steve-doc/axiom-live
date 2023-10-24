@@ -7,15 +7,15 @@ assignees: steve-doc
 
 ---
 
-#Epic #1
+## Epic #1
 
 As a **User** I want to **do some action** so that I can **derive some value**
 
-#Tasks
+## Tasks
 
 * [ ] Task 1
 * [ ] Task 2
 
-#Acceptance Criteria
+## Acceptance Criteria
 
 What a successful test would be
