@@ -13,8 +13,8 @@ As a **User** I want to **do some action** so that I can **derive some value**
 
 #Tasks
 
-*[] Task 1
-*[] Task 2
+* [ ] Task 1
+* [ ] Task 2
 
 #Acceptance Criteria
 
