@@ -1,49 +1,54 @@
-{% extends "jobs/base.html" %} {% block content %}
-<main class="container">
-  <div class="hero bglight py-5">
-    <h1 class="">Our Current Job Openings</h1>
-    <hr class="my-4">
-    <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consectetur nam voluptatem. Nostrum nisi in nemo incidunt tempore iure facilis delectus consequatur? Omnis libero voluptate minus veritatis doloremque earum ducimus.</p>
-    
+{% extends "jobs/base.html" %} 
+{% block content %}
+
+<section class="home-hero container-fluid bglight p-5 mb-5">
+  <div class="home-hero-title-cont row justify-content-center">
+    <div class="home-hero-title col-6">
+      <h2>Our Current Job Openings</h2>
+    </div>
   </div>
+</section>
+
 {% for job in jobs %}
 
 <div class="container media content-section">
   <div class="media-body">
     <div class="article-metadata row">
-      <small class="text-muted col">Location: {{ job.location }}</small>
-      <small class="text-muted col text-end">Posted: {{ job.date_posted|date:"F d, Y" }}</small>
+      <small class="text-muted col icon"><i class="fa-solid fa-location-dot fa-lg" style="color: orange;"></i> {{ job.location }}</small>
+      <small class="text-muted col text-end"><i class="fa-solid fa-calendar fa-lg" style="color: orange;"></i> {{ job.date_posted|date:"F d, Y" }}</small>
     </div>
-    <h2><a class="job-title" href="{% url 'job-detail' job.id %}">{{ job.job_title }}</a></h2>
+    <h3><a class="job-title" href="{% url 'job-detail' job.id %}">{{ job.job_title }}</a></h3>
     <!-- <p class="article-content">{{ job.description }}</p> -->
   </div>
   <div class="text-muted article-metadata row py-1">
-    <small class="col">Salary: {{ job.salary }}</small>
-    <small class="col text-end">Job Type: <strong class="jobtype">{{ job.job_type }}</strong></small>
+    <small class="col"><i class="fa-solid fa-euro-sign fa-lg" style="color: orange;"></i> {{ job.salary }}</small>
+    <small class="col text-end"><strong class="jobtype">{{ job.job_type }}</strong></small>
 </div>
 </div>
 
 {% endfor %}
+
 {% if is_paginated %}
 
+<div class="text-center">
 {% if page_obj.has_previous %}
-    <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
-    <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+    <a class="btn btn-outline-secondary btn-sm mb-4" href="?page=1">First</a>
+    <a class="btn btn-outline-secondary btn-sm mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
 {% endif %}
 
 {% for num in page_obj.paginator.page_range %}
     {% if page_obj.number == num %}
-        <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+        <a class="btn btn-secondary btn-sm mb-4" href="?page={{ num }}">{{ num }}</a>
     {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
-        <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+        <a class="btn btn-outline-secondary btn-sm mb-4" href="?page={{ num }}">{{ num }}</a>
     {% endif %}
 {% endfor %}
 
 {% if page_obj.has_next %}
-    <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number}}">Next</a>
-    <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+    <a class="btn btn-secondary-info btn-sm mb-4" href="?page={{ page_obj.next_page_number}}">Next</a>
+    <a class="btn btn-secondary-info btn-sm mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
 {% endif %}
 
 {% endif%}
-
+</div>
 {% endblock content %}

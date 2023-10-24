@@ -4,20 +4,20 @@
   <div class="media-body">
     <div class="article-metadata row">
       <small class="text-muted col">Location: {{ object.location }}</small>
-      <small class="text-muted col text-end"
-        >Posted: {{ object.date_posted|date:"F d, Y" }}</small
-      >
+      <small class="text-muted col text-end">
+        Posted: {{ object.date_posted|date:"F d, Y" }}
+      </small>
     </div>
-    <h2 class="article-title my-3">{{ object.job_title }}</h2>
-    <h4>Job Description</h4>
-    <p class="">{{ object.description | safe }}</p>
-    <h4>Experience</h4>
-    <p class="">{{ object.skills | safe }}</p>
-  </div>
-  <div class="text-muted article-metadata row py-1">
-    <small class="col">Salary: {{ object.salary }}</small>
-    <small class="col text-end">Job Type: <strong class="jobtype">{{ object.job_type }}</strong></small>
-</div>
+      <h2 class="article-title my-3">{{ object.job_title }}</h2>
+      <h4>Job Description</h4>
+      <p class="">{{ object.description | safe }}</p>
+      <h4>Experience</h4>
+      <p class="">{{ object.skills | safe }}</p>
+    </div>
+    <div class="text-muted article-metadata row py-1">
+      <small class="col">Salary: {{ object.salary }}</small>
+      <small class="col text-end">Job Type: <strong class="jobtype">{{ object.job_type }}</strong></small>
+    </div>
   </div>
  
   {% if user.is_staff %}
