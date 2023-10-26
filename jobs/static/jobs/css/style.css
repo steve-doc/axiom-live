@@ -17,162 +17,166 @@ body {
   }
 
 
-  img {
-    max-width: 100%;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    /* color: #444444; */
-    color: var(--heading-color);
-  }
-  
-  ul {
-    margin: 0;
-  }
-  
-  .site-header {
-    background-color: #dddddde4;
-    /* background-color: red; */
-  }
-  
-  .nav-link.active {
-    color: Black !important;
-    font-weight: 500 !important;
-  }
+img {
+  max-width: 100%;
+}
 
-  .site-header .navbar-nav .nav-link {
-    color: darkslategray;
-  }
-  
-  .site-header .navbar-nav .nav-link:hover {
-    color: rgb(26, 44, 44);
-  }
-  
-  .site-header .navbar-nav {
-    font-weight: 500;
-  }
+h1, h2, h3, h4, h5, h6 {
+  /* color: #444444; */
+  color: var(--heading-color);
+}
+
+ul {
+  margin: 0;
+}
+
+footer {
+  margin-top: 2rem;
+}
 
 
-  .page-heading {
-    margin: 2rem 0;
-  }
-  
-  .content-section {
-    background: #ffffff;
-    padding: 10px 20px;
-    border: 1px solid black;
-    border-radius: 15px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-  }
+.site-header,
+.foot {
+  background-color: #dddddde4;
+}
 
-  .home-hero {
-    min-height: 65vh;
-    background:url(https://res.cloudinary.com/dltyaip8n/image/upload/v1697646833/static/media/meeting.01a37b96aa5b.webp) center center no-repeat;
-    background-size: cover;
-    position: relative;
-  }
+.nav-link.active {
+  color: Black !important;
+  font-weight: 500 !important;
+}
 
-  .home-hero-title-cont {
-    position: absolute;
-    top: 38%;
-    width: 100%;
-    text-align: center;
-  }
+.site-header .navbar-nav .nav-link {
+  color: darkslategray;
+}
 
-  .home-hero-title {
-    background-color: #44444464;
-    padding: 30px 0px;
-    border-radius: 20px;
-  }
+.site-header .navbar-nav .nav-link:hover {
+  color: rgb(26, 44, 44);
+}
 
-  .home-hero-title h2 {
-    color: #fafafa;
-  }
+.site-header .navbar-nav {
+  font-weight: 500;
+}
 
-  .card {
-    height: 100% !important;
-  }
+.page-heading {
+  margin: 2rem 0;
+}
 
-  .card-title {
-    color: var(--heading-color);
-  }
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 15px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
 
-  .card-footer {
-    background-color: #dddddde4 !important;
-    border-top: 0 !important;
-    padding-top: 0 !important;
-  }
-  
-  .services {
-    padding: 30px 0px;
-  }
+.home-hero {
+  min-height: 65vh;
+  background:url(https://res.cloudinary.com/dltyaip8n/image/upload/v1697646833/static/media/meeting.01a37b96aa5b.webp) center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
 
-  .services .card {
-    background-color: #dddddde4 !important;
-    margin: 0 10px;
-  }
+.home-hero-title-cont {
+  position: absolute;
+  top: 38%;
+  width: 100%;
+  text-align: center;
+}
 
-  .postings-hero {
-    min-height: 65vh;
-    background:url(/media/meeting.jpg) center center no-repeat;
-    background-size: cover;
-  }
-  
-  .job-title {
-    color: Black;    
-    text-decoration: none;
-  }
-  
-  a.job-title:hover {
-    color: #428bca;
-  }
-  
-  .job-content {
-    min-height: 20vh;
-    border: 1px solid #c4c2c2;
-  }
-  
-  /* .article-img {
-    height: 65px;
-    width: 65px;
-    margin-right: 16px;
-  } */
-  
-  .job-metadata {
-    padding-bottom: 3px !important;
-    margin-bottom: 4px;
-    border-bottom: 1px solid #e3e3e3
-  }
-  
-  .job-metadata a:hover {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  /* .article-svg {
-    width: 25px;
-    height: 25px;
-    vertical-align: middle;
-  } */
-  
-  .account-img {
-    height: 125px;
-    width: 125px;
-    margin-right: 20px;
-    margin-bottom: 16px;
-  }
-  
-  .account-heading {
-    font-size: 2.5rem;
-  }
+.home-hero-title {
+  background-color: #44444464;
+  padding: 30px 0px;
+  border-radius: 20px;
+}
 
-  .jobtype {
-    background-color: rgba(0, 128, 0, 0.711);
-    border-radius: 10px;
-    color: white;
-    padding: 3px 5px;
-    margin-bottom: 5px;
-  }
+.home-hero-title h2 {
+  color: #fafafa;
+}
+
+.card {
+  height: 100% !important;
+}
+
+.card-title {
+  color: var(--heading-color);
+}
+
+.card-footer {
+  background-color: #dddddde4 !important;
+  border-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.services {
+  padding: 30px 0px;
+}
+
+.services .card {
+  background-color: #dddddde4 !important;
+  margin: 0 10px;
+}
+
+.postings-hero {
+  min-height: 65vh;
+  background:url(/media/meeting.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.job-title {
+  color: Black;    
+  text-decoration: none;
+}
+
+a.job-title:hover {
+  color: #428bca;
+}
+
+.job-content {
+  min-height: 20vh;
+  border: 1px solid #c4c2c2;
+}
+
+/* .article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+} */
+
+.job-metadata {
+  padding-bottom: 3px !important;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.job-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+/* .article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+} */
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+.jobtype {
+  background-color: rgba(0, 128, 0, 0.711);
+  border-radius: 10px;
+  color: white;
+  padding: 3px 5px;
+  margin-bottom: 5px;
+}
 
  
