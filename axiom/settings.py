@@ -31,7 +31,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False
+if os.environ.get("DEVELOPMENT"):
+    DUBUG = False
+else:
+    DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-stevedoc-axiom-zkonjehgcr7.ws-eu105.gitpod.io',
