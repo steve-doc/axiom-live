@@ -70,11 +70,11 @@
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
-              {% if user.is_authenticated %} {% if user.is_staff %}
+              {% if user.is_authenticated %}
               <a class="nav-item nav-link" href="{% url 'job-create' %}"
                 >Post New Job</a
               >
-              {% endif %}
+            
               <a
                 class="nav-item nav-link {% block nav_profile%}{% endblock %}"
                 href="{% url 'profile' %}"

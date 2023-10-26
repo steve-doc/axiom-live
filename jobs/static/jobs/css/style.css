@@ -135,6 +135,7 @@ a.job-title:hover {
 .job-content {
   min-height: 20vh;
   border: 1px solid #c4c2c2;
+  padding: 10px;
 }
 
 /* .article-img {

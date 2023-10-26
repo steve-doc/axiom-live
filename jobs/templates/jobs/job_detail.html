@@ -8,11 +8,16 @@
         Posted: {{ object.date_posted|date:"F d, Y" }}
       </small>
     </div>
+    <div>
       <h2 class="my-3">{{ object.job_title }}</h2>
       <h4>Job Description</h4>
-      <p class="job-content">{{ object.description | safe }}</p>
+      <div class="job-content">
+        {{ object.description | safe }}
+      </div>
       <h4>Experience</h4>
-      <p class="job-content">{{ object.skills | safe }}</p>
+      <div class="job-content">
+        {{ object.skills | safe }}
+      </div>
     </div>
     <div class="text-muted job-metadata row py-1">
       <small class="col">Salary: {{ object.salary }}</small>
@@ -20,7 +25,7 @@
     </div>
   </div>
  
-  {% if user.is_staff %}
+  {% if object.creator == user or user.is_staff %}
   <div class="container">
     <a
       class="btn btn-secondary btn-sm mt-1 mb-1"
