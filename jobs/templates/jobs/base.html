@@ -43,14 +43,14 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav me-auto">
-              <a class="nav-item nav-link" href="{% url 'jobs-home' %}">Home</a>
-              <a class="nav-item nav-link" href="{% url 'jobs-postings' %}"
+              <a class="nav-item nav-link {% block nav_home%}{% endblock %}" href="{% url 'jobs-home' %}">Home</a>
+              <a class="nav-item nav-link {% block nav_postings%}{% endblock %}" href="{% url 'jobs-postings' %}"
                 >Jobs</a
               >
-              <a class="nav-item nav-link" href="{% url 'jobs-services' %}"
+              <a class="nav-item nav-link {% block nav_services%}{% endblock %}" href="{% url 'jobs-services' %}"
                 >Services</a
               >
-              <a class="nav-item nav-link" href="{% url 'jobs-contact' %}"
+              <a class="nav-item nav-link {% block nav_contact%}{% endblock %}" href="{% url 'jobs-contact' %}"
                 >Contact</a
               >
             </div>
@@ -84,7 +84,56 @@
     </main>
 
     <footer>
-      
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand mr-4" href="{% url 'jobs-home' %}"
+            ><img src="{% static 'media/axiom_logo_no_bg.webp' %}" alt="axiom logo" width="250px"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarToggle"
+            aria-controls="navbarToggle"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav me-auto">
+              <a class="nav-item nav-link" href="{% url 'jobs-home' %}">Home</a>
+              <a class="nav-item nav-link" href="{% url 'jobs-postings' %}"
+                >Jobs</a
+              >
+              <a class="nav-item nav-link" href="{% url 'jobs-services' %}"
+                >Services</a
+              >
+              <a class="nav-item nav-link" href="{% url 'jobs-contact' %}"
+                >Contact</a
+              >
+            </div>
+            <!-- Navbar Right Side -->
+            <div class="navbar-nav">
+              {% if user.is_authenticated %}
+              {% if user.is_staff %}
+                <a class="nav-item nav-link" href="{% url 'job-create' %}"
+                >Post New Job</a>
+              {% endif %}
+              <a class="nav-item nav-link" href="{% url 'profile' %}"
+                >Profile</a
+              >
+              <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+              {% else %}
+              <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+              <a class="nav-item nav-link" href="{% url 'register' %}"
+                >Register</a
+              >
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </nav>
     </footer>
 
     <script

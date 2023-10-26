@@ -1,7 +1,7 @@
 
 :root {
   --main-icon-color: orange;
-  --heading-color:#ba86fe;
+  --heading-color: rgb(45, 45, 45);
 }
 
 html {
@@ -35,6 +35,11 @@ body {
     /* background-color: red; */
   }
   
+  .nav-link.active {
+    color: Black !important;
+    font-weight: 500 !important;
+  }
+
   .site-header .navbar-nav .nav-link {
     color: darkslategray;
   }
@@ -43,9 +48,10 @@ body {
     color: rgb(26, 44, 44);
   }
   
-  .site-header .navbar-nav .nav-link.active {
+  .site-header .navbar-nav {
     font-weight: 500;
   }
+
 
   .page-heading {
     margin: 2rem 0;
