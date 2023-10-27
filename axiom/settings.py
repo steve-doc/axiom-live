@@ -26,15 +26,15 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
-
+DEVELOPMENT = os.environ.get('DEVELOPMENT')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-if os.environ.get("DEVELOPMENT"):
-    DUBUG = False
-else:
+if DEVELOPMENT:
     DEBUG = True
+else:
+    DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-stevedoc-axiom-zkonjehgcr7.ws-eu105.gitpod.io',
