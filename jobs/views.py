@@ -91,7 +91,7 @@ class JobUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def test_func(self):
         job = self.get_object()
-        if self.request.user == job.creator:
+        if self.request.user == job.creator or self.request.user.is_staff:
             return True
         return False
 
@@ -102,7 +102,7 @@ class JobDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
   
     def test_func(self):
         job = self.get_object()
-        if self.request.user == job.creator:
+        if self.request.user == job.creator or self.request.user.is_staff:
             return True
         return False
 

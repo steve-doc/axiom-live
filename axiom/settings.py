@@ -31,10 +31,8 @@ DEVELOPMENT = os.environ.get('DEVELOPMENT')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-if DEVELOPMENT:
-    DEBUG = True
-else:
-    DEBUG = False
+
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-stevedoc-axiom-zkonjehgcr7.ws-eu105.gitpod.io',
