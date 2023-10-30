@@ -113,8 +113,8 @@ ul {
 }
 
 .services {
-  width: 100%;
-  background-image: url("https://res.cloudinary.com/dltyaip8n/image/upload/v1698671775/static/media/axiom_services_bg.7187aa845188.webp");
+  height: 100%;
+  background-image: url(https://res.cloudinary.com/dltyaip8n/image/upload/v1698671775/static/media/axiom_services_bg.7187aa845188.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
