@@ -16,7 +16,6 @@ body {
     /* margin-top: 5rem; */
   }
 
-
 img {
   max-width: 100%;
 }
@@ -29,11 +28,6 @@ h1, h2, h3, h4, h5, h6 {
 ul {
   margin: 0;
 }
-
-footer {
-  margin-top: 2rem;
-}
-
 
 .site-header,
 .foot {
@@ -77,10 +71,20 @@ footer {
   position: relative;
 }
 
+.services-hero {
+  /* min-height: 10vh; */
+  background-size: cover;
+  position: relative;
+}
+
 .home-hero-title-cont {
   position: absolute;
   top: 38%;
   width: 100%;
+  text-align: center;
+}
+
+.services-hero-title-cont {
   text-align: center;
 }
 
@@ -109,14 +113,14 @@ footer {
 }
 
 .services {
-  height: 100%;
-  background-image: url("/static/media/services-background");
+  width: 100%;
+  background-image: url("/static/media/axiom_services_bg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-.services .card {
+.card {
   background-color: #dddddde4 !important;
   margin: 0 10px;
 }
@@ -142,12 +146,6 @@ a.job-title:hover {
   padding: 10px;
 }
 
-/* .article-img {
-  height: 65px;
-  width: 65px;
-  margin-right: 16px;
-} */
-
 .job-metadata {
   padding-bottom: 3px !important;
   margin-bottom: 4px;
@@ -158,12 +156,6 @@ a.job-title:hover {
   color: #333;
   text-decoration: none;
 }
-
-/* .article-svg {
-  width: 25px;
-  height: 25px;
-  vertical-align: middle;
-} */
 
 .account-img {
   height: 125px;
