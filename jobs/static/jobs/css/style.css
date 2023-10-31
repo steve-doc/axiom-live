@@ -80,6 +80,7 @@ ul {
 .home-hero-title-cont {
   position: absolute;
   top: 38%;
+  left: 0;
   width: 100%;
   text-align: center;
 }
@@ -159,6 +160,7 @@ a.job-title:hover {
 }
 
 .account-img {
+  
   height: 125px;
   width: 125px;
   margin-right: 20px;
