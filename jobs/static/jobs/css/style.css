@@ -56,7 +56,7 @@ ul {
 }
 
 .content-section {
-  background: #ffffff;
+  background-color: #D1D4D9 !important;
   padding: 10px 20px;
   border: 1px solid black;
   border-radius: 15px;
@@ -108,7 +108,7 @@ ul {
 }
 
 .card-footer {
-  background-color: ##D1D4D9 !important;
+  background-color: #D1D4D9 !important;
   border-top: 0 !important;
   padding-top: 0 !important;
 }
@@ -123,7 +123,7 @@ ul {
 }
 
 .card {
-  background-color: ##D1D4D9 !important;
+  background-color: #D1D4D9 !important;
   margin: 0 10px;
 }
 
@@ -143,6 +143,7 @@ a.job-title:hover {
 }
 
 .job-content {
+  background: #f3f3f3;
   min-height: 20vh;
   border: 1px solid #c4c2c2;
   padding: 10px;

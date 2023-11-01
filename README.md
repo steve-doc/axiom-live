@@ -45,6 +45,8 @@ Having installed Bootstrap for this project, the default “native font stack”
 
 ### Product Owner
 
+
+
 ## Wireframes
 
 Wireframes have been produced using [Figma](https://www.figma.com/file/O8JAL46OdCJH5ZrVO6Ie9x/Axiom?type=design&node-id=0%3A1&mode=design&t=9b1wHrEOAMbPun55-1)
@@ -64,3 +66,92 @@ Wireframes have been produced using [Figma](https://www.figma.com/file/O8JAL46Od
 ### Contact Page
 
 ![Contact Page](axiom/documentation/contact_wireframe.png)
+
+
+## Features
+
+### Existing Features
+
+- **Navigation**
+    - The navigation bar is located both at the top and bottom of the screen
+- **Home Page**
+    - The home page
+- **Jobs Page**
+    - The home page
+- **Services Page**
+    - The home page
+- **Contact Page**
+    - The home page
+- **Registration**
+    - The home page
+- **Login**
+    - The home page
+- **Profile**
+    - The home page
+- **Create a job posting**
+    - The home page
+- **Edit Job**
+    - The home page
+- **Delete Job**
+    - The home page
+
+
+### Future Features
+
+- **Candidates database**
+    - The navigation bar is located both at the top and bottom of the screen
+- **Apply for job**
+    - The home page
+- **Job candidates**
+    - The home page
+- **Candidate and Jobs filtering**
+    - The navigation bar is located both at the top and bottom of the screen
+- **Integration with LinkedIn**
+    - The home page
+- **Insights Page**
+    - The home page
+
+## Tools & Technologies Used
+
+- [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
+- [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
+- [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) used for an enhanced responsive layout.
+- [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
+- [JavaScript](https://www.javascript.com) used for user interaction on the site.
+- [Python](https://www.python.org) used as the back-end programming language.
+- [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
+- [GitHub](https://github.com) used for secure online code storage.
+- [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
+- [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
+- [Django](https://www.djangoproject.com) used as the Python framework for the site.
+- [PostgreSQL](https://www.postgresql.org) used as the relational database management.
+- [ElephantSQL](https://www.elephantsql.com) used as the Postgres database.
+- [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
+- [Cloudinary](https://cloudinary.com) used for online static file storage.
+- [Gunicorn](https://gunicorn.org/) used as a server provider for the site.
+- [dbdiagram.io](https://dbdiagram.io/) used to design database schema.
+
+## Database Design
+
+[PostgreSQL](https://www.postgresql.org) has been used as the relational database for deployment, hosted using [ElephantSQL](https://www.elephantsql.com).  To model the database I used [dbdiagram.io](https://dbdiagram.io/d/Axiom-65365b24ffbf5169f041a7be) to create the Entity Relationship Diagram to visualise the relationship between the 3 tables required.
+
+![database schema](axiom/documentation/database_schema.png)
+
+- **users**
+    - importing django user model
+    - one to one relationship with profile table
+    - one to many relationship 
+- **profile**
+    - custom model with one to one relationship with users table
+    - has one field (other than ID) storage of profile image
+![profile model](axiom/documentation/profile_model.png)
+- **job**
+    - custom model for storage of job postings
+    - many to one relationship with users table (many jobs per user)
+    - Presets defined in model for job_type field.
+![job model](axiom/documentation/job_model.png)
+
+
+## Agile Development Process
+
+### GitHub Projects
