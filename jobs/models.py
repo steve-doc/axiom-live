@@ -10,6 +10,7 @@ JOB_TYPES = [
         ("Temp", "Temp"),
     ]
 
+
 class Job(models.Model):
     job_title = models.CharField(max_length=100)
     date_posted = models.DateTimeField(default=timezone.now)

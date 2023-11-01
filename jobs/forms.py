@@ -18,4 +18,3 @@ class JobUpdateForm(forms.ModelForm):
             'description': SummernoteWidget(),
             'skills': SummernoteWidget()
         }
-

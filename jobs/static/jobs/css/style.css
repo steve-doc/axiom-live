@@ -62,6 +62,7 @@ ul {
   border-radius: 15px;
   margin-top: 30px;
   margin-bottom: 20px;
+  box-shadow: 5px 5px 8px black
 }
 
 .home-hero {
@@ -93,6 +94,7 @@ ul {
   background-color: #44444464;
   padding: 30px 0px;
   border-radius: 20px;
+  box-shadow: 5px 5px 8px black
 }
 
 .home-hero-title h2 {
@@ -125,6 +127,7 @@ ul {
 .card {
   background-color: #D1D4D9 !important;
   margin: 0 10px;
+  box-shadow: 5px 5px 8px black
 }
 
 .postings-hero {

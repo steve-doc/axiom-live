@@ -1,82 +1,72 @@
-{% extends "jobs/base.html" %}
-{% load static %}
-{% block nav_contact%}active{% endblock %}
+{% extends "jobs/base.html" %} 
+{% load static %} 
+{% block nav_contact%}active{% endblock %} 
 {% block content %}
 
 <section class="home-hero container-fluid bglight p-5">
   <div class="home-hero-title-cont row justify-content-center">
     <div class="home-hero-title col-6">
       <h2>Helping you find the best talent</h2>
-      <a class="btn btn-primary mt-2" href="{% url 'jobs-services' %}" role="button">Learn more</a>
+      <a
+        class="btn btn-primary mt-2"
+        href="{% url 'jobs-services' %}"
+        role="button"
+        >Learn more</a
+      >
     </div>
   </div>
 </section>
 
-   <section class="container-fluid py-4" id="contact">
-      <h1 class="text-center">Contact us</h1>
-      <h2 class="text-center">For a confidential chat</h2>
-      <form method="post" class="mx-5 px-5 py-2 border">
-        {% csrf_token %} 
+<section class="container-fluid py-4" id="contact">
+  <h1 class="text-center">Contact us</h1>
+  <h2 class="text-center">For a confidential chat</h2>
+  <form method="post" class="mx-5 px-5 py-2 border">
+    {% csrf_token %}
 
-        <p class="text-center">
-         Have questions? Fill out the enquiry form and we will get back to you as soon as possible
-        </p>
-        <input
-          class="form-control my-3"
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Name"
-          autocomplete="on"
-        />
-        <input
-          class="form-control my-3"
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Email"
-          autocomplete="on"
-        />
-        <input
-          class="form-control my-3"
-          type="tel"
-          id="tel"
-          name="tel"
-          placeholder="Tel Number"
-          autocomplete="on"
-        />
-        <textarea
-          class="form-control my-3"
-          name="message"
-          id="message"
-          rows="5"
-          placeholder="Message"
-        ></textarea>
-        <button
-          class="btn btn-success btn-md-lg d-grid gap-2 col-4 mx-auto"
-          type="submit"
-          value="Submit"
-        >Send</button>
-      </form>
-
-      <!-- data-bs-toggle="modal"
-      data-bs-target="#acknowledge" -->
-
-      <div class="modal" tabindex="-1" id="acknowledge">
-         <div class="modal-dialog modal-dialog-centered">
-           <div class="modal-content text-center">
-             <div class="modal-header bg-success">
-               <h5 class="modal-title">Thanks for getting in contact!</h5>
-               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-             </div>
-             <div class="modal-body">
-               <p>We'll be in touch shortly</p>
-             </div>
-             <div class="modal-footer">
-               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-             </div>
-           </div>
-         </div>
-       </div>
+    <p class="text-center">
+      Have questions? Fill out the enquiry form and we will get 
+      back to you as soon as possible
+    </p>
+    <input
+      class="form-control my-3"
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Name"
+      autocomplete="on"
+    />
+    <input
+      class="form-control my-3"
+      type="email"
+      id="email"
+      name="email"
+      placeholder="Email"
+      autocomplete="on"
+    />
+    <input
+      class="form-control my-3"
+      type="tel"
+      id="tel"
+      name="tel"
+      placeholder="Tel Number"
+      autocomplete="on"
+    />
+    <textarea
+      class="form-control my-3"
+      name="message"
+      id="message"
+      rows="5"
+      placeholder="Message"
+    ></textarea>
+    <button
+      class="btn btn-success btn-md-lg d-grid gap-2 col-4 mx-auto"
+      type="submit"
+      value="Submit"
+    >
+      Send
+    </button>
+  </form>
+</section>
 
 {% endblock content %}
+

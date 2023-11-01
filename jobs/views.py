@@ -14,15 +14,13 @@ from django.core.mail import EmailMessage, get_connection
 from django.conf import settings
 
 
-
-
 def home(request):
     return render(request, 'jobs/home.html', {'title': 'Home'})
 
 
 def postings(request):
     context = {
-		'jobs': Job.objects.all()
+        'jobs': Job.objects.all()
     }
     return render(request, 'jobs/postings.html', context)
 
@@ -58,15 +56,7 @@ class JobDetailView(DetailView):
 class JobCreateView(LoginRequiredMixin, CreateView):
     model = Job
     form_class = JobUpdateForm
-    # fields = [
-    #     'job_title',
-    #     'location',
-    #     'job_type',
-    #     'description',
-    #     'skills',
-    #     'salary'
-    #     ]
-    
+
     def form_valid(self, form):
         form.instance.creator = self.request.user
         return super().form_valid(form)
@@ -75,15 +65,6 @@ class JobCreateView(LoginRequiredMixin, CreateView):
 class JobUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Job
     form_class = JobUpdateForm
-    # fields = [
-    #     'job_title',
-    #     'location',
-    #     'job_type',
-    #     'description',
-    #     'skills',
-    #     'salary'
-    #     ]
-
     
     def form_valid(self, form):
         form.instance.creator = self.request.user
@@ -128,9 +109,7 @@ def send_email(request):
             Message:
             {message}
             '''
-            
-            # EmailMessage(email_from, name, recipient_list, tel, message, connection=connection).send()
-            
+           
             email_message = EmailMessage(
                 subject='Enquiry from Axiom Website',
                 body=formatted_body,
