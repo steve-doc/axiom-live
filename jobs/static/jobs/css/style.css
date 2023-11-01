@@ -180,4 +180,11 @@ a.job-title:hover {
   margin-bottom: 5px;
 }
 
+.social a {
+  color: #333333;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 0 1.5rem;
+}
+
  
