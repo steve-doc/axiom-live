@@ -1,184 +1,209 @@
 {% extends "jobs/base.html" %}
 {% load static %}
-{% block nav_services%}active{% endblock %}
+{% block nav_services%}active{% endblock %} 
 {% block content %}
 
-<div class="home-hero container-fluid bglight p-5 mb-3">
-   <div class="home-hero-title-cont row justify-content-center">
-   <div class="home-hero-title col-6">
+<section class="home-hero container-fluid bglight p-5 mb-3">
+  <div class="home-hero-title-cont row justify-content-center">
+    <div class="home-hero-title col-6">
       <h2 class="text-center">Our Services</h2>
-   </div>
-   </div>
-</div>
-<section class="services py-5">
-   
-   <div class="container-lg row gx-3 gy-5 mx-auto">
-
-      <div class="col-lg-6">
-         <div class="card px-0">
-            <!-- <img
-               src="{% static 'media/new_job.webp' %}"
-               class="card-img-top"
-               alt="..."
-            /> -->
-            <div class="card-body" id="recruitment">
-               <h3 class="card-title text-center">Recruitment</h3>
-               <h5 class="card-text text-center">20 Years of experience</h5>
-               <p class="card-text text-center">Axiom Consultants is a recruitment company that specialises in connecting job seekers with employers in various industries. We act as a bridge between talented individuals looking for opportunities and companies in need of skilled professionals. We work with clients across Ireland and the UK. Our main areas of expertise are Financial Services, Accountancy, IT, Medical Services</p>
-               <ul class="my-3 col-9 mx-auto">
-                  <li class="list-group-item text-center">Talent Acquisition and Management</li>
-                  <li class="list-group-item text-center">Job advertising</li>
-                  <li class="list-group-item text-center">Candidate sourcing</li>
-                  <li class="list-group-item text-center">Pre-screening and shortlisting</li>
-                  <li class="list-group-item text-center">Interview coordination</li>
-                  <li class="list-group-item text-center">Background checks and reference verification</li>
-                  <li class="list-group-item text-center">Offer negotiation and onboarding</li>
-                  <li class="list-group-item text-center">Market insights and trends</li>
-               </ul>
-               <!-- <p class="card-text text-center">
-                  Axiom Consultants bring expertise, experience, and a fresh perspective to help businesses identify growth opportunities, optimise operations, attract and retain talent, and drive overall business growth.
-               </p> -->
-            </div>
-
-         </div>
-      </div>
-
-      <div class="col-lg-6">
-         <div class="card px-0">
-            <!-- <img
-               src="{% static 'media/new_job.webp' %}"
-               class="card-img-top"
-               alt="..."
-            /> -->
-            <div class="card-body" id="grow">
-               <h3 class="card-title text-center">Grow your business</h3>
-               <p class="card-text text-center">Axiom Consultants can help grow your business in several ways</p>
-               <ul class="my-3 col-9 mx-auto">
-                  <li class="list-group-item text-center">Recruitment of top talent</li>
-                  <li class="list-group-item text-center">Streamlining hiring processes</li>
-                  <li class="list-group-item text-center">Access to a wider candidate pool</li>
-                  <li class="list-group-item text-center">Market expertise and insights</li>
-                  <li class="list-group-item text-center">Enhanced employer branding</li>
-                  <li class="list-group-item text-center">Retention strategies</li>
-               </ul>
-               <p class="card-text text-center">
-                  It's important to note that the specific ways in which Axiom Consultants can help grow your business may vary depending on your industry, location, and specific needs. It is recommended to discuss your requirements with Axiom Consultants directly to understand how we can tailor our services to support your business growth.
-               </p>
-            </div>
-
-         </div>
-      </div>
-
-      <div class="col-lg-6">
-         <div class="card px-0">
-            <!-- <img
-               src="{% static 'media/new_job.webp' %}"
-               class="card-img-top"
-               alt="..."
-            /> -->
-            <div class="card-body" id="mergers">
-               <h3 class="card-title text-center">Mergers & Acquisitions</h3>
-               <p class="card-text text-center">We can provide valuable assistance throughout the entire mergers and acquisitions (M&A) process. Here are some ways they can help</p>
-               <ul class="my-3 col-9 mx-auto">
-                  <li class="list-group-item text-center">Strategic Planning</li>
-                  <li class="list-group-item text-center">Target Identification and Due Diligence</li>
-                  <li class="list-group-item text-center">Valuation and Negotiations</li>
-                  <li class="list-group-item text-center">Deal Structuring and Financing</li>
-                  <li class="list-group-item text-center">Change Management and Communication</li>
-                  <li class="list-group-item text-center">Post-Merger Performance Management</li>
-               </ul>
-               <p class="card-text text-center">
-                  Please note that the specific services provided by Axiom Consultants may vary depending on the client's requirements and the unique circumstances of each M&A transaction.
-               </p>
-            </div>
-
-         </div>
-      </div>
-
-      <div class="col-lg-6">
-         <div class="card px-0">
-            <!-- <img
-               src="{% static 'media/new_job.webp' %}"
-               class="card-img-top"
-               alt="..."
-            /> -->
-            <div class="card-body" id="consultant">
-               <h3 class="card-title text-center">Become an Axiom Consultant</h3>
-               <p class="card-text text-center">At Axiom Consultants we offer unrivalled fully remote working conditions. We offer you continued support and access to the best clients in your field of expertise. We allow you to choose your working hours so you can have a complete work/life balance. You decide how much you earn, you set your limit. Talk to us today to find out more. Some reasons to consider becoming an Axiom Consultant.</p>
-               <ul class="my-3 col-9 mx-auto">
-                  <li class="list-group-item text-center">Access to hidden job opportunities</li>
-                  <li class="list-group-item text-center">Expertise and guidance</li>
-                  <li class="list-group-item text-center">Career advancement opportunities</li>
-                  <li class="list-group-item text-center">Access to network and connections</li>
-                  <li class="list-group-item text-center">Remote working</li>
-                  <li class="list-group-item text-center">Trusted to grow your own business</li>
-                  <li class="list-group-item text-center">Unlimited earnings potential</li>
-                  <li class="list-group-item text-center">Equity share</li>
-               </ul>
-               <!-- <p class="card-text text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In, consequatur unde. Quae dolor recusandae quasi quos corporis nisi dolorem tempore voluptates atque, natus dignissimos voluptatem amet quo, quod ipsa animi.
-               </p> -->
-            </div>
-
-         </div>
-      </div>
-
-      <div class="col-lg-6">
-         <div class="card px-0">
-            <!-- <img
-               src="{% static 'media/new_job.webp' %}"
-               class="card-img-top"
-               alt="..."
-            /> -->
-            <div class="card-body" id="client">
-               <h3 class="card-title text-center">Become an Axiom Client</h3>
-               <!-- <p class="card-text text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quidem quo placeat eos eveniet cumque voluptatibus minima inventore excepturi enim ad unde eum perspiciatis rem odio, impedit distinctio adipisci! Animi.</p> -->
-               <ul class="my-3 col-9 mx-auto">
-                  <li class="list-group-item text-center">Access to a wider talent pool</li>
-                  <li class="list-group-item text-center">Timesaving</li>
-                  <li class="list-group-item text-center">Expertise in candidate assessment</li>
-                  <li class="list-group-item text-center">Industry knowledge</li>
-                  <li class="list-group-item text-center">Increased efficiency</li>
-                  <li class="list-group-item text-center">Employer branding</li>
-                  <li class="list-group-item text-center">Budget Management</li>
-                  <li class="list-group-item text-center">Negotiation assistance</li>
-               </ul>
-               <!-- <p class="card-text text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque commodi corporis facilis? Sint laudantium libero, tenetur, dolores qui cupiditate hic officia quisquam, quibusdam similique at natus quasi voluptates sunt fugiat.
-               </p> -->
-            </div>
-
-         </div>
-      </div>
-
-      <div class="col-lg-6">
-         <div class="card px-0">
-            <!-- <img
-               src="{% static 'media/new_job.webp' %}"
-               class="card-img-top"
-               alt="..."
-            /> -->
-            <div class="card-body" id="sectors">
-               <h3 class="card-title text-center">Areas of Expertise</h3>
-               <p class="card-text text-center">At Axiom Consultants, we partner with clients across various sectors. Our knowledge within these sectors is unparalleled. All of our consultants have a deep knowledge or direct working experience of the sector they represent. We have worked hard to establish an excellent and trusted reputation across all sectors we specialise in.</p>
-               <ul class="my-3 col-9 mx-auto">
-                  <li class="list-group-item text-center">Wealth Management</li>
-                  <li class="list-group-item text-center">General Insurance</li>
-                  <li class="list-group-item text-center">Life & Pensions</li>
-                  <li class="list-group-item text-center">Mergers & Acquisitions</li>
-                  <li class="list-group-item text-center">Accountancy</li>
-                  <li class="list-group-item text-center">Compliance</li>
-                  <li class="list-group-item text-center">Medical Services</li>
-                  <li class="list-group-item text-center">Information Technology</li>
-               </ul>
-               <!-- <p class="card-text text-center">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor corporis repellendus facere quis quas. Doloremque velit, nostrum magni quia corporis sint delectus, aliquid quo facilis praesentium, odio maxime dolorem nobis.
-               </p> -->
-            </div>
-
-         </div>
-      </div>
-   </div>
+    </div>
+  </div>
 </section>
-   
+
+<section class="services py-5">
+  <div class="container-lg row gx-3 gy-5 mx-auto">
+    <div class="col-lg-6">
+      <div class="card px-0">
+        <div class="card-body" id="recruitment">
+          <h3 class="card-title text-center">Recruitment</h3>
+          <h5 class="card-text text-center">20 Years of experience</h5>
+          <p class="card-text text-center">
+            Axiom Consultants is a recruitment company that specialises in
+            connecting job seekers with employers in various industries. We act
+            as a bridge between talented individuals looking for opportunities
+            and companies in need of skilled professionals. We work with clients
+            across Ireland and the UK. Our main areas of expertise are Financial
+            Services, Accountancy, IT, Medical Services
+          </p>
+          <ul class="my-3 col-9 mx-auto">
+            <li class="list-group-item text-center">
+              Talent Acquisition and Management
+            </li>
+            <li class="list-group-item text-center">Job advertising</li>
+            <li class="list-group-item text-center">Candidate sourcing</li>
+            <li class="list-group-item text-center">
+              Pre-screening and shortlisting
+            </li>
+            <li class="list-group-item text-center">Interview coordination</li>
+            <li class="list-group-item text-center">
+              Background checks and reference verification
+            </li>
+            <li class="list-group-item text-center">
+              Offer negotiation and onboarding
+            </li>
+            <li class="list-group-item text-center">
+              Market insights and trends
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card px-0">
+        <div class="card-body" id="grow">
+          <h3 class="card-title text-center">Grow your business</h3>
+          <p class="card-text text-center">
+            At Axiom Consultants we understand the difficulties associated with
+            growing your business. We can offer the solutions you need to move
+            your business onto the next level. With our business lean approach,
+            we can offer flexibility with recruiting costs and budgeting.
+          </p>
+          <ul class="my-3 col-9 mx-auto">
+            <li class="list-group-item text-center">
+              Recruitment of top talent
+            </li>
+            <li class="list-group-item text-center">
+              Streamlining hiring processes
+            </li>
+            <li class="list-group-item text-center">
+              Access to a wider candidate pool
+            </li>
+            <li class="list-group-item text-center">
+              Market expertise and insights
+            </li>
+            <li class="list-group-item text-center">
+              Enhanced employer branding
+            </li>
+            <li class="list-group-item text-center">Retention strategies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card px-0">
+        <div class="card-body" id="mergers">
+          <h3 class="card-title text-center">Mergers & Acquisitions</h3>
+          <p class="card-text text-center">
+            WAxiom Consultants has over twenty years’ experience in the
+            Financial Services sector. As such, we have deep and trusted
+            contacts throughout our chosen sectors of expertise. If you are
+            looking to sell or acquire a new business, contact us today to find
+            out how we can help.
+          </p>
+          <ul class="my-3 col-9 mx-auto">
+            <li class="list-group-item text-center">Strategic Planning</li>
+            <li class="list-group-item text-center">
+              Target Identification and Due Diligence
+            </li>
+            <li class="list-group-item text-center">
+              Valuation and Negotiations
+            </li>
+            <li class="list-group-item text-center">
+              Deal Structuring and Financing
+            </li>
+            <li class="list-group-item text-center">
+              Change Management and Communication
+            </li>
+            <li class="list-group-item text-center">
+              Post-Merger Performance Management
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card px-0">
+        <div class="card-body" id="consultant">
+          <h3 class="card-title text-center">Become an Axiom Consultant</h3>
+          <p class="card-text text-center">
+            Always interested in being lean and business streamlined, Axiom
+            Consultants is on the lookout for talented individuals to become
+            part of the success story. If you would like to work remotely, chose
+            hours that work for you, and be in full control of what you earn,
+            then we may be the place for you.
+          </p>
+          <ul class="my-3 col-9 mx-auto">
+            <li class="list-group-item text-center">
+              Access to hidden job opportunities
+            </li>
+            <li class="list-group-item text-center">Expertise and guidance</li>
+            <li class="list-group-item text-center">
+              Career advancement opportunities
+            </li>
+            <li class="list-group-item text-center">
+              Access to network and connections
+            </li>
+            <li class="list-group-item text-center">Remote working</li>
+            <li class="list-group-item text-center">
+              Trusted to grow your own business
+            </li>
+            <li class="list-group-item text-center">
+              Unlimited earnings potential
+            </li>
+            <li class="list-group-item text-center">Equity share</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card px-0">
+        <div class="card-body" id="client">
+          <h3 class="card-title text-center">Become an Axiom Client</h3>
+          <p class="card-text text-center">
+            Axiom Consultants prides itself on its reputation to be able to
+            deliver every time on chosen assignments. We work very closely to
+            understand your values, culture and future plans so that we can
+            select the very best candidates in the market.
+          </p>
+          <ul class="my-3 col-9 mx-auto">
+            <li class="list-group-item text-center">
+              Access to a wider talent pool
+            </li>
+            <li class="list-group-item text-center">Timesaving</li>
+            <li class="list-group-item text-center">
+              Expertise in candidate assessment
+            </li>
+            <li class="list-group-item text-center">Industry knowledge</li>
+            <li class="list-group-item text-center">Increased efficiency</li>
+            <li class="list-group-item text-center">Employer branding</li>
+            <li class="list-group-item text-center">Budget Management</li>
+            <li class="list-group-item text-center">Negotiation assistance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card px-0">
+        <div class="card-body" id="sectors">
+          <h3 class="card-title text-center">Areas of Expertise</h3>
+          <p class="card-text text-center">
+            At Axiom Consultants, we partner with clients across various
+            sectors. Our knowledge within these sectors is unparalleled. All of
+            our consultants have a deep knowledge or direct working experience
+            of the sector they represent. We have worked hard to establish an
+            excellent and trusted reputation across all sectors we specialise
+            in.
+          </p>
+          <ul class="my-3 col-9 mx-auto">
+            <li class="list-group-item text-center">Wealth Management</li>
+            <li class="list-group-item text-center">General Insurance</li>
+            <li class="list-group-item text-center">Life & Pensions</li>
+            <li class="list-group-item text-center">Mergers & Acquisitions</li>
+            <li class="list-group-item text-center">Accountancy</li>
+            <li class="list-group-item text-center">Compliance</li>
+            <li class="list-group-item text-center">Medical Services</li>
+            <li class="list-group-item text-center">Information Technology</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock content %}

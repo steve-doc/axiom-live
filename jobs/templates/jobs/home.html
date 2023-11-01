@@ -1,32 +1,55 @@
 {% extends "jobs/base.html" %} 
-{% load static %}
-{% block nav_home%}active{% endblock %}
+{% load static %} 
+{% block nav_home%}active{% endblock %} 
 {% block content %}
 
 <section class="home-hero container-fluid bglight p-5">
   <div class="home-hero-title-cont row justify-content-start">
     <div class="home-hero-title col-6 mx-auto">
       <h2>Helping you find the best talent</h2>
-      <a class="btn btn-primary mt-2" href="{% url 'jobs-services' %}" role="button">Learn more</a>
+      <a
+        class="btn btn-primary mt-2"
+        href="{% url 'jobs-services' %}"
+        role="button"
+        >Learn more</a
+      >
     </div>
   </div>
 </section>
 
 <section class="home-services container-fluid mx-auto py-3">
   <div class="mx-5 my-5">
-  <h2 class="text-center pb-3">Partner with Axiom</h2>
-  <div class="">
-    <p>
-      Axiom Consultants is a recruitment company that specialises in connecting job seekers with employers in various industries. We act as a bridge between talented individuals looking for opportunities and companies in need of skilled professionals. We work with clients across Ireland and the UK. Our main areas of expertise are Financial Services, Accountancy, IT and Medical Services. <br>
-    <p>
-      Our philosophy is to provide top talent solutions, not high volumes of CV’s with irrelevant experience. When you partner with us, you can be assured that we will source the right people for your organisation and will be closely involved in the hiring process from start to finish and beyond. We are very proud of our strong relationships with some of the most reputable financial services companies and without doubt, the market’s best collection of talent.
-    </p>
+    <h2 class="text-center pb-3">Partner with Axiom</h2>
+    <div>
+      <p>
+        Axiom Consultants is a recruitment company that specialises in
+        connecting job seekers with employers in various industries. We act as a
+        bridge between talented individuals looking for opportunities and
+        companies in need of skilled professionals. We work with clients across
+        Ireland and the UK. Our main areas of expertise are Financial Services,
+        Accountancy, IT and Medical Services. <br />
+      </p>
 
-    <p>
-      As a candidate, when you engage with Axiom Consultants, you automatically receive our full attention. We listen to your career objectives and will stay in regular communication with you throughout the interview processes, provide quick and honest feedback and be here for you to answer any queries you may have along the way. As candidates, you are also our clients and we are here to support you throughout your career progression.
-    </p>
-      
-  </div>
+      <p>
+        Our philosophy is to provide top talent solutions, not high volumes of
+        CV’s with irrelevant experience. When you partner with us, you can be
+        assured that we will source the right people for your organisation and
+        will be closely involved in the hiring process from start to finish and
+        beyond. We are very proud of our strong relationships with some of the
+        most reputable financial services companies and without doubt, the
+        market’s best collection of talent.
+      </p>
+
+      <p>
+        As a candidate, when you engage with Axiom Consultants, you
+        automatically receive our full attention. We listen to your career
+        objectives and will stay in regular communication with you throughout
+        the interview processes, provide quick and honest feedback and be here
+        for you to answer any queries you may have along the way. As candidates,
+        you are also our clients and we are here to support you throughout your
+        career progression.
+      </p>
+    </div>
   </div>
 
   <div class="row gx-1 gy-5">
@@ -40,12 +63,17 @@
         <div class="card-body">
           <h5 class="card-title text-center">Recruitment</h5>
           <p class="card-text">
-            Are you looking for a new job? We specialise in the financial service sector. To find our more please visit our jobs page.
+            Are you looking for a new job? We specialise in the financial
+            service sector. To find our more please visit our jobs page.
           </p>
         </div>
 
         <div class="card-footer mx-auto">
-          <a href="{% url 'jobs-services' %}#recruitment" class="card-link btn btn-outline-primary">Learn More</a>
+          <a
+            href="{% url 'jobs-services' %}#recruitment"
+            class="card-link btn btn-outline-primary"
+            >Learn More</a
+          >
         </div>
       </div>
     </div>
@@ -60,12 +88,17 @@
         <div class="card-body">
           <h5 class="card-title text-center">Growing your business</h5>
           <p class="card-text">
-            Looking to hire the best talent? We can help you fill your current vacancies by finding the right candidates for you.
+            Looking to hire the best talent? We can help you fill your current
+            vacancies by finding the right candidates for you.
           </p>
         </div>
 
         <div class="card-footer mx-auto">
-          <a href="{% url 'jobs-services' %}#grow" class="card-link btn btn-outline-primary">Learn More</a>
+          <a
+            href="{% url 'jobs-services' %}#grow"
+            class="card-link btn btn-outline-primary"
+            >Learn More</a
+          >
         </div>
       </div>
     </div>
@@ -80,12 +113,17 @@
         <div class="card-body">
           <h5 class="card-title text-center">Acquisitions And Mergers</h5>
           <p class="card-text">
-            Planning on selling your business? Or maybe you are looking to expand? We can help by putting you in touch with the right people. 
+            Planning on selling your business? Or maybe you are looking to
+            expand? We can help by putting you in touch with the right people.
           </p>
         </div>
 
         <div class="card-footer mx-auto">
-          <a href="{% url 'jobs-services' %}#mergers" class="card-link btn btn-outline-primary">Learn More</a>
+          <a
+            href="{% url 'jobs-services' %}#mergers"
+            class="card-link btn btn-outline-primary"
+            >Learn More</a
+          >
         </div>
       </div>
     </div>
@@ -98,13 +136,19 @@
         />
         <div class="card-body">
           <h5 class="card-title text-center">Become and Axiom Consultant</h5>
-          <!-- <p class="card-text">
-            If you would like to manage your own work diary, work fully remotely and dictate what you earn, then becoming an Axiom Consultant might be for you. We work closely with our clients to forge lasting relationships. They trust us to deliver to them the best talent in the market. If you have experience in Financial Services or have worked in a recruitment sector that you would like to develop under the Axiom brand, then we would like to hear from you.
-          </p> -->
+          <p class="card-text">
+            Would you like to work remotely, chose your own working hours and be
+            in full control of how much you earn? If you have answered yes, then
+            we may be a fit for you. This way to find out more.
+          </p>
         </div>
 
         <div class="card-footer mx-auto">
-          <a href="{% url 'jobs-services' %}#consultant" class="card-link btn btn-outline-primary">Learn More</a>
+          <a
+            href="{% url 'jobs-services' %}#consultant"
+            class="card-link btn btn-outline-primary"
+            >Learn More</a
+          >
         </div>
       </div>
     </div>
@@ -118,13 +162,18 @@
         />
         <div class="card-body">
           <h5 class="card-title text-center">Become an Axiom Client</h5>
-          <!-- <p class="card-text">
-            Axiom Consultants has spent the last 5 years building a highly credible and recognised level of service that is unrivalled. Working closely with our clients, understanding the culture of your organisation and then presenting only relevant candidates to you is what we do best.
-          </p> -->
+          <p class="card-text">
+            Axiom Consultants values it reputation on getting things right first
+            time, every time. Find out how to become an Axiom Client.
+          </p>
         </div>
 
         <div class="card-footer mx-auto">
-          <a href="{% url 'jobs-services' %}#client" class="card-link btn btn-outline-primary">Learn More</a>
+          <a
+            href="{% url 'jobs-services' %}#client"
+            class="card-link btn btn-outline-primary"
+            >Learn More</a
+          >
         </div>
       </div>
     </div>
@@ -138,15 +187,22 @@
         />
         <div class="card-body">
           <h5 class="card-title text-center">Our focus sectors</h5>
-
+          <p class="card-text">
+            With over twenty years of direct industry experience, we pride
+            ourselves on our sectoral knowledge, contacts and presence. This way
+            to find out more.
+          </p>
         </div>
 
         <div class="card-footer mx-auto">
-          <a href="{% url 'jobs-services' %}#sectors" class="card-link btn btn-outline-primary">Learn More</a>
+          <a
+            href="{% url 'jobs-services' %}#sectors"
+            class="card-link btn btn-outline-primary"
+            >Learn More</a
+          >
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
