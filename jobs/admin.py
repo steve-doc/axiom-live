@@ -3,9 +3,8 @@ from .models import Job
 from django_summernote.admin import SummernoteModelAdmin
 
 
+# Register Summernote in admin panel
 @admin.register(Job)
 class JobAdmin(SummernoteModelAdmin):
 
     summernote_fields = ('description', 'skills')
-
-# admin.site.register(Job) not required when using the above decorator

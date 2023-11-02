@@ -14,25 +14,30 @@ from django.core.mail import EmailMessage, get_connection
 from django.conf import settings
 
 
+# Home page view
 def home(request):
     return render(request, 'jobs/home.html', {'title': 'Home'})
 
 
+# Job postings view
 def postings(request):
     context = {
-        'jobs': Job.objects.all()
+        'jobs': Job.objects.all(),
     }
     return render(request, 'jobs/postings.html', context)
 
 
+# Services page view
 def services(request):
     return render(request, 'jobs/services.html', {'title': 'Services'})
 
 
+# Contact page view
 def contact(request):
     return render(request, 'jobs/contact.html', {'title': 'Contact'})
 
 
+# Job postings view
 class JobListView(ListView):
     model = Job
     template_name = 'jobs/postings.html'
@@ -41,6 +46,7 @@ class JobListView(ListView):
     paginate_by = 5
 
 
+# Job details view
 class JobDetailView(DetailView):
     model = Job
     fields = [
@@ -53,6 +59,7 @@ class JobDetailView(DetailView):
         ]
 
 
+# Create new job view
 class JobCreateView(LoginRequiredMixin, CreateView):
     model = Job
     form_class = JobUpdateForm
@@ -62,10 +69,11 @@ class JobCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
+# Update job view
 class JobUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Job
     form_class = JobUpdateForm
-    
+
     def form_valid(self, form):
         form.instance.creator = self.request.user
         return super().form_valid(form)
@@ -77,10 +85,11 @@ class JobUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return False
 
 
+# Delete Job view
 class JobDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Job
     success_url = "/postings/"
-  
+
     def test_func(self):
         job = self.get_object()
         if self.request.user == job.creator or self.request.user.is_staff:
@@ -88,6 +97,8 @@ class JobDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return False
 
 
+# Contact page send email view
+# passes fields from form to django email function
 def send_email(request):
     if request.method == "POST":
         with get_connection(
@@ -96,8 +107,8 @@ def send_email(request):
             username=settings.EMAIL_HOST_USER,
             password=settings.EMAIL_HOST_PASSWORD,
             use_tls=settings.EMAIL_USE_TLS
-        ) as connection:    
-            email_from = request.POST.get("email") 
+        ) as connection:
+            email_from = request.POST.get("email")
             name = request.POST.get("name")
             recipient_list = [settings.EMAIL_HOST_USER, ]
             tel = request.POST.get("tel")
@@ -109,7 +120,7 @@ def send_email(request):
             Message:
             {message}
             '''
-           
+
             email_message = EmailMessage(
                 subject='Enquiry from Axiom Website',
                 body=formatted_body,
@@ -120,6 +131,7 @@ def send_email(request):
 
             email_message.send()
             messages.success(
-                request, f'Thanks for your enquiry, we will get back to you shortly')
+                request, f'Thanks for your enquiry, \
+                    we will get back to you shortly')
 
     return render(request, 'jobs/contact.html', {'title': 'Contact'})

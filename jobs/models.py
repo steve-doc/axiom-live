@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 
 
+# Define presets for job type
 JOB_TYPES = [
         ("Full-Time", "Full-Time"),
         ("Part-Time", "Part-Time"),
@@ -11,6 +12,7 @@ JOB_TYPES = [
     ]
 
 
+# Define job model
 class Job(models.Model):
     job_title = models.CharField(max_length=100)
     date_posted = models.DateTimeField(default=timezone.now)
@@ -20,7 +22,7 @@ class Job(models.Model):
     skills = models.TextField()
     salary = models.CharField(max_length=30)
     creator = models.ForeignKey(User, on_delete=models.CASCADE)
-    
+
     def __str__(self):
         return self.job_title
 

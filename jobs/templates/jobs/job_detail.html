@@ -1,6 +1,7 @@
 {% extends "jobs/base.html" %} 
 {% block content %}
 
+<!-- Detailed job form -->
 <div class="container media content-section mb-5">
   <div class="media-body">
     <div class="job-metadata row">
@@ -27,7 +28,7 @@
       </small>
     </div>
   </div>
- 
+ <!-- Display Update/Delete buttons if creator or staff -->
   {% if object.creator == user or user.is_staff %}
 
   <div class="container">
