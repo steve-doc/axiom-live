@@ -32,7 +32,7 @@ DEVELOPMENT = os.environ.get('DEVELOPMENT')
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-stevedoc-axiom-zkonjehgcr7.ws-eu105.gitpod.io',
@@ -130,7 +130,7 @@ LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
-USE_I18N = False
+USE_I18N = True
 
 USE_TZ = True
 
