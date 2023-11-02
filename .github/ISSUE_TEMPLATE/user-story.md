@@ -7,7 +7,7 @@ assignees: steve-doc
 
 ---
 
-## Epic #1
+- Epic #1
 
 As a **User** I want to **do some action** so that I can **derive some value**
 
