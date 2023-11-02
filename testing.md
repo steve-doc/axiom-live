@@ -6,6 +6,8 @@ Return to [README.md](README.md) file
 
 ### HTML
 
+I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
+
 | Page | W3C URL | Before Screenshot | After Screenshot | Notes |
 | --- | --- | --- | --- | --- |
 | Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Faxiom-recruitment-f7943c5e25ff.herokuapp.com%2F) | ![Home before](axiom/documentation/testing/w3c_home_before.png) | --- | --- |
