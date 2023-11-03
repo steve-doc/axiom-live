@@ -6,20 +6,24 @@ from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 
 # user registration view
 def register(request):
-    if request.method == 'POST':  # checks if POST has been received from register.html
+    # checks if POST has been received from register.html
+    if request.method == 'POST':
         # assigns form data to form object
         form = UserRegisterForm(request.POST)
-        if form.is_valid():  # is_valid method checks if form data fields are valid
+        # is_valid method checks if form data fields are valid
+        if form.is_valid():
             form.save()  # saves form to user database
             # is_valid form data is stored in form.cleaned_data dictionary
             # assigns stored username to variable
             username = form.cleaned_data.get('username')
             # next create success message by injecting username into f string
             messages.success(
-                request, f'Your account has been created! You are now able to login.')
+                request, f'Your account has been created! \
+                    You are now able to login.')
             return redirect('login')  # redirects to login page
     else:
-        form = UserRegisterForm()  # asssigns blank UserCreation form to form object
+        # asssigns blank UserCreation form to form object
+        form = UserRegisterForm()
     return render(request, 'users/register.html', {'form': form})
 
 
@@ -28,9 +32,10 @@ def register(request):
 def profile(request):
     if request.method == 'POST':
         update_form = UserUpdateForm(request.POST, instance=request.user)
-        profile_form = ProfileUpdateForm(request.POST,
-                                        request.FILES,
-                                        instance=request.user.profile)
+        profile_form = ProfileUpdateForm(
+            request.POST,
+            request.FILES,
+            instance=request.user.profile)
         if update_form.is_valid() and profile_form.is_valid():
             update_form.save()
             profile_form.save()

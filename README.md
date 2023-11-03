@@ -1,9 +1,30 @@
 # Axiom Consultants
 ![Am I Responsive Screenshot](axiom/documentation/amIResponsive.png)
 
+[Repository](https://github.com/steve-doc/axiom)
+
+
+[Live site](https://axiom-recruitment-f7943c5e25ff.herokuapp.com/)
+
+## Table of contents
+1. [Introduction](#introduction)
+2. [UX](#ux)
+3. [User Stories](#user-stories)
+4. [Wireframes](#wireframes)
+5. [Features](#features)
+6. [Technology Used](#technology-used)
+7. [Database Design](#database-design)
+8. [Agile Development Process](#agile-development-process)
+9. [Testing](#testing)
+10. [Accessibility Features](#accessibility-features)
+11. [Deployment](#deployment)
+12. [Credits](#credits)
+13. [Acknowledgements](#acknowledgements)
+
+
 ## Introduction
 
-The Axiom Consultants website is designed to showcase the services of a real recruitment company. 
+The Axiom Consultants website is designed to showcase the services of a real recruitment company. The [current website](https://axiomconsultants.ie/) of the company  is dated, broken in places and, in particular, jobs cannot be created without involving the developer.
 
 Users can register for the site, which will store their details.  This will provide CRUD functionality on their own job posts.
 
@@ -190,13 +211,12 @@ Wireframes have been produced using [Figma](https://www.figma.com/file/O8JAL46Od
 - **Insights Page**
     - The home page
 
-## Tools & Technologies Used
+## Technology Used
 
 - [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
 - [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) used for an enhanced responsive layout.
 - [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
-- [JavaScript](https://www.javascript.com) used for user interaction on the site.
 - [Python](https://www.python.org) used as the back-end programming language.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [GitHub](https://github.com) used for secure online code storage.
@@ -209,6 +229,7 @@ Wireframes have been produced using [Figma](https://www.figma.com/file/O8JAL46Od
 - [Cloudinary](https://cloudinary.com) used for online static file storage.
 - [Gunicorn](https://gunicorn.org/) used as a server provider for the site.
 - [dbdiagram.io](https://dbdiagram.io/) used to design database schema.
+- [Gimp](https://www.gimp.org/) - used for sizing of images.
 
 ## Database Design
 
@@ -249,6 +270,13 @@ The Epics and User Stories were linked to organise the development flow into foc
 ## Testing
 
 Please refer to [testing.md](testing.md)
+
+## Accessibility Features
+
+* All images have alt labels
+* Any links that take user to external website have aria labels
+* Care has been taken to ensure good contrast between text and back ground colors
+* Have used semantic html throughout
 
 ## Deployment
 
@@ -391,19 +419,21 @@ The only difference I found between local version and heroku deployment, was the
 
 | Source | Location | Notes |
 | --- | --- | --- |
-| [Python.plainenglish.io](https://python.plainenglish.io/how-to-implement-pagination-in-django-with-function-based-views-8f6462554930) | Home Page | 'How to implement pagination in django with function based views' |
+| [Django Documentation](https://docs.djangoproject.com/en/4.2/) | Documentation Page | Email and forms functionality |
 | [Fontawesome](https://fontawesome.com/search?o=r&m=free) | Social Media Links & Forms | Icons |
-| [Stackoverflow.com](https://stackoverflow.com/) | Register View | Go to resource for many head scratching problems |
+| [Stackoverflow.com](https://stackoverflow.com/) | misc | Go to resource for many head scratching problems |
 | [Corey Schafer Django Tutorial](https://www.youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p) | Entire series | This excellent tutorial helped with multiple aspects of my project |
+| [Leonardo Simeone Food Blog](https://github.com/leonardo-simeone/venezuelan-food-cookbook/) | Readme & Test Files | I used the framework of Leonardo's excellent documentation as the basis for my own |
 
 ### Media
 
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
+| [Pexels](https://www.pexels.com/) | misc| stock photos | Images for hero and services cards |
 | [Current Axiom Consultant Website](https://axiomconsultants.ie/) | Jobs Page | job content | Text from existing job posts |
 
 
-### Acknowledgement
+## Acknowledgements
 
 - I would like to thank my Code Institute mentor, Brian Macharia for his fantastic support on this project.
 - I also like to thank Lewis Dillon, our cohort lead.  Having surged ahead, he was very generous with his time
