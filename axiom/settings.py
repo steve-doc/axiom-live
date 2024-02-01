@@ -36,12 +36,12 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-stevedoc-axiom-zkonjehgcr7.ws-eu105.gitpod.io',
-    'axiom-recruitment-f7943c5e25ff.herokuapp.com'
+    'https://axiom-recruitment-live-cd729092adbc.herokuapp.com'
     ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-stevedoc-axiom-zkonjehgcr7.ws-eu105.gitpod.io',
-    'https://axiom-recruitment-live-cd729092adbc.herokuapp.com'
+    'https://axiom-recruitment-live-cd729092adbc.herokuapp.com/'
     ]
 
 
