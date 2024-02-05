@@ -33,11 +33,4 @@ urlpatterns = [
         template_name='users/logout.html'
         ), name='logout'),
     path('summernote/', include('django_summernote.urls')),
-]
-
-
-if settings.DEBUG:
-    urlpatterns += static(
-        settings.MEDIA_URL,
-        document_root=settings.MEDIA_ROOT
-        )
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
