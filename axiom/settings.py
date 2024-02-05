@@ -32,15 +32,15 @@ DEVELOPMENT = os.environ.get('DEVELOPMENT')
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-stevedoc-axiom-zkonjehgcr7.ws-eu105.gitpod.io',
+    '8000-stevedoc-axiomlive-u3hvylgr796.ws-eu108.gitpod.io',
     'https://axiom-recruitment-live-cd729092adbc.herokuapp.com'
     ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-stevedoc-axiom-zkonjehgcr7.ws-eu105.gitpod.io',
+    'https://8000-stevedoc-axiomlive-u3hvylgr796.ws-eu108.gitpod.io',
     'https://axiom-recruitment-live-cd729092adbc.herokuapp.com'
     ]
 
